@@ -120,3 +120,14 @@ sudo nano /etc/apache2/sites-available/proxy-host.conf
 
 
 ```
+
+* Install JAVA 
+
+```
+sudo apt install -y openjdk-8-jre-headless
+
+echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")" | sudo tee -a /etc/profile
+source /etc/profile
+
+```
+
